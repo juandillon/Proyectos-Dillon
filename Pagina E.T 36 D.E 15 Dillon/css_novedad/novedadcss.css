@@ -1,0 +1,36 @@
+#cuerpo {
+    background-color: #DDDDDD;
+    width: 100%;
+    float: left;
+}
+#cuerpo #contenidogeneral {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: auto;
+    margin-bottom: 50px;
+}
+#cuerpo #contenidogeneral #contenido {
+    width: 68%;
+    margin-right: 2%;
+    float: left;
+}
+
+div {
+    display: block;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+#contenido #noticia1 img {
+    width: 40%;
+    margin-right: 15px;
+    float: left;
+}

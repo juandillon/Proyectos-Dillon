@@ -1,0 +1,95 @@
+.fuente{
+  font-family: "calibri";
+  text-align:justify;
+  background-color: rgb(237, 194, 110);
+}
+h1{
+font-size: 25px;
+color: rgb(45, 184, 244);
+}
+h2{
+font-size: 35px;
+color:rgb(15, 191, 176);
+margin-top: 10px;
+margin-bottom: 30px;
+font-family: "Anders";
+}
+h3{
+  color: rgb(1, 2, 9);
+  margin: auto;
+  font-family: "arialblack";
+  text-decoration: underline;
+  padding: 0;
+}
+.derecha{
+  width: 60%;
+  float: right;
+}
+.derecha h1{
+  border-bottom: 4px solid;
+  color: red;
+  margin: 0px;
+  padding: 0px;
+}
+.presentacion,.formacion,.Experiencia,.portfolio{
+  font-size: 25px;
+  font-family: "calibri";
+  border-style: solid;
+  border-color: red;
+  background:rgb(208, 209, 201);
+  padding: 10px;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.presentacion ul{
+list-style: none;
+font-style:normal;
+text-transform: uppercase;
+
+font-size: 20px;
+padding: 0;
+
+}
+.presentacion ul li{
+  border-bottom: 2px solid ;
+}
+.formacion h2{
+  color: rgb(1, 2, 9);
+  margin: auto;
+  font-family: "arialblack";
+  text-decoration: underline;
+}
+.formacion ul{
+  font-size: 20px;
+  text-decoration: underline;
+ }
+ .portfolio ul{
+   font-size: 20px;
+   font-family: "calibri"
+ }
+.izquierda{
+  width: 30%;
+  float: left;
+  margin: 0 5%;
+  position: fixed;
+}
+
+
+.izquierda img{
+   border-radius: 25px;
+   border-style:solid;
+   color: red;
+}
+body{
+  background: rgba(240, 238, 107, 0.66);
+}
+
+.url{
+ list-style: none;
+ font-size: 20px;
+ margin: 1px;
+ border-color: red;
+ border-style: solid;
+ padding: 0;
+}
