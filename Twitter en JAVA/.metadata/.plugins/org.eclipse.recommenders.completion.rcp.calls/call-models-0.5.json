@@ -1,0 +1,23 @@
+{
+  "H:\\Trabajo practico JAVA 1\\Tp1\\src": {
+    "location": "H:\\Trabajo practico JAVA 1\\Tp1\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027H:\\Trabajo practico JAVA 1\\Tp1\\src\u0027. Skipped."
+  },
+  "C:\\Program Files\\Java\\jre1.8.0_91\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_91\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No class path info available for \u0027C:\\Program Files\\Java\\jre1.8.0_91\\lib\\rt.jar\u0027. Skipped."
+  },
+  "C:\\Program Files\\Java\\jre1.8.0_131\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_131\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "E:\\Trabajo practico JAVA 1\\Tp1\\src": {
+    "location": "E:\\Trabajo practico JAVA 1\\Tp1\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027E:\\Trabajo practico JAVA 1\\Tp1\\src\u0027. Skipped."
+  }
+}

@@ -1,0 +1,72 @@
+package tp1;
+
+import java.util.Scanner;
+
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
+public class MAIN {
+	public static void main(String[] args){
+		TUIT tuit = new TUIT();
+		BOT bot=new BOT();
+		int op;
+		int respuesta1=1;
+		String tuit1="", usuario1 = null, main="";
+		 final ImageIcon icon2 = new ImageIcon("main.png");
+		JOptionPane.showMessageDialog(null, "Bienvenido a ronronear V1.0 " + System.getProperty("line.separator") + "Pulse aceptar para iniciar el programa", null, 0, icon2);
+		try{
+		do{
+			main=(
+					"1- Tuitear"  + 
+					System.getProperty("line.separator") + "2- Leer tuits de cierta persona" + 
+					System.getProperty("line.separator") + "3- Tuits sin respuesta" + 
+					System.getProperty("line.separator") + "4- salir"
+					);
+			op=Integer.parseInt(JOptionPane.showInputDialog(null, main));
+				switch(op){
+				case 1:
+					 final ImageIcon usuarioi = new ImageIcon("usuario.png");
+					 usuario1=(String)JOptionPane.showInputDialog(null,"Ingrese usuario: ","Datos",JOptionPane.QUESTION_MESSAGE,usuarioi ,null,"");
+							System.out.println("El usuario que se va a tomar es: @" + usuario1);
+							do{
+							tuit1=JOptionPane.showInputDialog(null, "Ingrese tuit(max. 15 palabras)");
+							tuit.settuitt(tuit1, usuario1);
+							if(tuit.tuittear()>0 && tuit.tuittear()<=15){
+								bot.setp(usuario1, tuit.gettuit2());
+								bot.terminator();
+								if(bot.benito()==false && bot.wally()==false){
+									bot.escribirnorespondidos();
+								}
+							}
+							else{
+								JOptionPane.showMessageDialog(null, "Ingrese tuit nuevamente (Error)");
+							}
+							}while(tuit.tuittear()<0 || tuit.tuittear()>15);														
+					break;
+				case 2:
+					usuario1=JOptionPane.showInputDialog(null, "Ingrese usuario para saber tuits: ");
+		    		tuit.settuitt(tuit1, usuario1);
+					tuit.buscartuitpersona();
+					break;
+				case 3:
+					bot.mensnrespondido();
+					break;
+				case 4:
+					System.exit(0);
+					break;
+					default:
+							JOptionPane.showMessageDialog(null, "Ingrese opcion valida");
+						break;
+				}
+				        respuesta1=JOptionPane.showOptionDialog(null, "Repetir el programa? ", "Repeticion", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null,
+						new Object[]{"Aceptar", "Cancelar"}, "aceptar"
+						);
+		}while(respuesta1==0);	
+		}
+		catch(Exception ex)
+		{
+			JOptionPane.showMessageDialog(null, "Ingreso un caracter o presiono el boton cancelar. Hasta luego!");
+			System.exit(0);
+		}
+	}
+}

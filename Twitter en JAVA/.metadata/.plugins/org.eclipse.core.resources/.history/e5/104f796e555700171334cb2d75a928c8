@@ -1,0 +1,64 @@
+package tp1;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class MAIN {
+	public static void main(String[] args){
+		Scanner leer=new Scanner(System.in);
+		Scanner leerusuario=new Scanner(System.in);
+		TUIT tuit = new TUIT();
+		BOT bot=new BOT();
+		int op, respuesta1=1;
+		String tuit1="", usuario1;
+		do{
+			System.out.println("--------Menu--------");
+			System.out.println("1- Tuitear");
+			System.out.println("2- Leer tuits de cierta persona");
+			System.out.println("3- Tuits sin respuesta");
+			System.out.println("4- salir");
+			op=leer.nextInt();
+			switch(op){
+			case 1:
+					System.out.println("Ingrese usuario");
+					System.out.println("Lo que siga al espacio no se tomara, no se admiten espacios al ingresar usuario");
+					usuario1=leerusuario.next();
+						System.out.println("El usuario que se va a tomar es: @" + usuario1);
+					    leer.nextLine();
+						do{
+						System.out.print("Ingrese tuit: ");
+						tuit1=leer.nextLine();
+						tuit.settuitt(tuit1, usuario1);
+						if(tuit.tuittear()>0 && tuit.tuittear()<=15){
+							bot.setp(usuario1, tuit.gettuit2());
+							bot.terminator();
+							bot.wally();
+							bot.benito();
+							if(bot.benito()==true){
+								JOptionPane.showMessageDialog(null, "Tuit sospechoso, quedara reservado.");
+							}
+							if(bot.wally()==true){
+								JOptionPane.showMessageDialog(null, bot.wally());
+							}
+						}
+						}while(tuit.tuittear()<0 || tuit.tuittear()>15);														
+				break;
+			case 2:
+				System.out.println("Ingrese usuario para saber tuits: ");
+				usuario1=leerusuario.next();
+	    		tuit.settuitt(tuit1, usuario1);
+				tuit.buscartuitpersona();
+				break;
+			case 3:
+				bot.mensnrespondido();
+				break;
+			case 4:
+				System.exit(0);
+				break;
+			}
+			System.out.println("Desea realizar otra opcion? 1-si ingrese otro numero para no");
+			respuesta1=leer.nextInt();
+		}while(respuesta1==1);	
+		leer.close();
+		leerusuario.close();
+	}
+
+}
